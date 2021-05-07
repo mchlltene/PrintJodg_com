@@ -1,14 +1,15 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import {View, Text} from 'react-native';
+import Router from './router';
+import { NavigationContainer } from '@react-navigation/native';
 
 const App = () => {
   return (
-    <View>
-      <Text>SEMANGAT QODIIIING aaaaaaaaaaaaaaa| YAAAYY -MAESTROO
-        FIX - MAESTRO UPDATE
-      </Text>
-    </View>
+    <NavigationContainer>
+      <Router />
+    </NavigationContainer>
   );
 };
 
 export default App;
+
