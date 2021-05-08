@@ -1,5 +1,5 @@
 {
-  "name": "PrintJodg_com",
+  "name": "finalproject",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,12 +10,29 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@expo/metro-config": "^0.1.64",
+    "@react-native-community/datetimepicker": "^3.4.7",
+    "@react-native-community/masked-view": "^0.1.11",
+    "@react-native-firebase/app": "^11.4.1",
+    "@react-native-picker/picker": "^1.15.0",
+    "@react-navigation/native": "^5.9.4",
+    "@react-navigation/stack": "^5.14.4",
+    "firebase": "^8.5.0",
     "react": "17.0.1",
-    "react-native": "0.64.0"
+    "react-native": "0.64.0",
+    "react-native-flash-message": "^0.1.23",
+    "react-native-gesture-handler": "^1.10.3",
+    "react-native-image-picker": "^3.5.0",
+    "react-native-reanimated": "^2.1.0",
+    "react-native-safe-area-context": "^3.2.0",
+    "react-native-screens": "^3.1.1",
+    "react-native-svg": "^12.1.1",
+    "react-native-svg-transformer": "^0.14.3",
+    "react-navigation-stack": "^2.10.4"
   },
   "devDependencies": {
-    "@babel/core": "7.13.16",
-    "@babel/runtime": "7.13.17",
+    "@babel/core": "7.14.0",
+    "@babel/runtime": "7.14.0",
     "@react-native-community/eslint-config": "2.0.0",
     "babel-jest": "26.6.3",
     "eslint": "7.14.0",
