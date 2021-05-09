@@ -4,7 +4,7 @@ import {Header, Gap} from '../../components';
 import firebase from '../../config/Firebase';
 import {Logo} from '../../assets';
 
-const AboutUs = ({navigation, route}) => {
+const Promo = ({navigation, route}) => {
   const [profile, setProfile] = useState({});
   const {title, uid} = route.params;
 
@@ -28,8 +28,8 @@ const AboutUs = ({navigation, route}) => {
         <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.profileWrapper}>
         <View>
-          <Text style={styles.title}># A B O U T  U S</Text>
-          <Text style={styles.subTitle}>Lebih dekat dengan PrintJoDg.com !</Text>
+          <Text style={styles.title}># P R O M O</Text>
+          <Text style={styles.subTitle}>Temukan promosi terbaru dari PrintJoDg.com !</Text>
         </View>
         <Image source={{uri: profile.photo}} style={styles.image} />
       </View>
@@ -39,32 +39,18 @@ const AboutUs = ({navigation, route}) => {
       <Text style={styles.text}>PrintJoDg.com</Text></View>
       </View>
       <Gap height={24} />
-      <View style={styles.aboutUsWrapper}>
-        <Text style={styles.cardTitle}>
-        Tentang Kami:
-        </Text>
-
-        <Text style={styles.cardTitle}>
-        PrintJoDg.com adalah salah satu solusi bagi khususnya 
-        Mahasiswa/i UNKLAB dalam menunjang pekerjaan kuliah mereka di sektor 'Online Print Services'.
-        Jadi kami sepakat membuat aplikasi yang bernama PrintJoDg.com.
-        dan, Anggota-anggota yang terlibat khususnya dalam pembuatan 
-        aplikasi ini adalah: </Text>
-        <Text style={styles.cardTitle}>1. Tene, Michell Gabriell</Text>
-        <Text style={styles.cardTitle}>2. Sangkoy, Ester Gracela Jenifer</Text>
-        <Text style={styles.cardTitle}>3. Tumulo, Septiano Rivo Chandra</Text>
-        <Text style={styles.cardTitle}>4. , Virjin Fanesa</Text>
-        <Text style={styles.cardTitle}>5. , Maestro Pythagoras</Text>
-        <Text style={styles.cardTitle}>
-        Jadi itulah kami, terimakasih atas rekan-rekan yang telah terlibat dan berusaha walaupun kami ber-5 masih tingkat 2 tapi kami telah berusaha maksimal dalam mengerjakan project ini, dan terimakasih kepada Sir. Adam Stenly yang telah memberikan ilmu dari mata-kuliah Mobile Programming yang sangat bermanfaat kepada kami.
-        Sekian, Aplikasi dari PrintJoDg.com. Terimakasih :)</Text>
+      <View style={styles.promoWrapper}>
+        <Text style={styles.cardTitle}>Promo-promo yang tersedia:</Text>
+        <Text style={styles.cardTitle}>1.) Voucher : Promosi berupa pemotongan harga yang dilakukan secara berkala</Text>
+        <Text style={styles.cardTitle}>2.) Gratis ongkos kirim : promosi berupa penggratisan ongkos kirim utk minimal biaya pencetakan tertentu.</Text>
+        <Text style={styles.cardTitle}>3.) Potongan Khusus Untuk mahasiswa hanya dengan menunjukan ID card</Text>
       </View>
       </ScrollView>
     </View>
   );
 };
 
-export default AboutUs;
+export default Promo;
 
 const styles = StyleSheet.create({
   page: {
@@ -100,18 +86,12 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: 'Poppins-Medium',
     marginBottom: 10,
-    flexDirection: 'row',
-    textAlign: 'justify',
   },
-  aboutUsWrapper: {
+  promoWrapper: {
     paddingHorizontal: 24,
     backgroundColor: 'white',
     paddingVertical: 15,
     flex: 1,
-  },
-  amount: {
-    fontSize: 16,
-    fontFamily: 'Poppins-Medium',
   },
   logo: {
     alignItems: 'center',
