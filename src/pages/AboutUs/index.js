@@ -53,7 +53,7 @@ const AboutUs = ({navigation, route}) => {
         <Text style={styles.cardTitle}>1. Tene, Michell Gabriell</Text>
         <Text style={styles.cardTitle}>2. Sangkoy, Ester Gracela Jenifer</Text>
         <Text style={styles.cardTitle}>3. Tumulo, Septiano Rivo Chandra</Text>
-        <Text style={styles.cardTitle}>4. , Virjin Fanesa (TSADISSSS)</Text>
+        <Text style={styles.cardTitle}>4. , Virjin Fanesa</Text>
         <Text style={styles.cardTitle}>5. , Maestro Pythagoras</Text>
         <Text style={styles.cardTitle}>
         Jadi itulah kami, terimakasih atas rekan-rekan yang telah terlibat dan berusaha walaupun kami ber-5 masih tingkat 2 tapi kami telah berusaha maksimal dalam mengerjakan project ini, dan terimakasih kepada Sir. Adam Stenly yang telah memberikan ilmu dari mata-kuliah Mobile Programming yang sangat bermanfaat kepada kami.

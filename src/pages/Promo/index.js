@@ -41,9 +41,9 @@ const Promo = ({navigation, route}) => {
       <Gap height={24} />
       <View style={styles.promoWrapper}>
         <Text style={styles.cardTitle}>Promo-promo yang tersedia:</Text>
-        <Text style={styles.cardTitle}>1.) Virjin Mengantar dengan senyuman jika pembelian > Rp. 20.000</Text>
+        <Text style={styles.cardTitle}>1.) Virjin Mengantar dengan senyuman jika pembelian diatas Rp. 20.000</Text>
         <Text style={styles.cardTitle}>2.) Virjin Mengantar secara free jika anda telah membeli sebanyak 10x</Text>
-        <Text style={styles.cardTitle}>3.) Promo 3</Text>
+        <Text style={styles.cardTitle}>3.) Vi</Text>
       </View>
       </ScrollView>
     </View>

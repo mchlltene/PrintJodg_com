@@ -5,10 +5,10 @@ const TransactionCard = () => {
   return (
     <View style={styles.container}>
       <View>
-        <Text>1. Format Kertas : A4</Text>
+        <Text>1. Format Kertas : HVS A4</Text>
         <Text>2. Jenis Bahan Kertas : Art Carton 230gr</Text>
+        <Text>3. Kliping : Tanpa Kliping</Text>
       </View>
-      <Text>| Tanpa Laminating</Text>
     </View>
   );
 };

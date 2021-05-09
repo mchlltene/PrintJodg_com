@@ -5,32 +5,48 @@ import firebase from '../../config/Firebase';
 import {Logo} from '../../assets';
 
 const Home = ({navigation, route}) => {
-  const [profile, setProfile] = useState({});
-
+  const [profilePhoto, setPhoto] = useState({});
+  const [profileName, setName] = useState({
+  fullName: '',
+  });
   const {uid} = route.params;
 
-  const getUserProfile = () => {
+  const getUserPhoto = () => {
     firebase
       .database()
       .ref(`users/${uid}/`)
       .once('value', res => {
         const photo = `data:image/jpeg;base64, ${res.val().photo}`;
-        setProfile({...res.val(), photo: photo});
+        setPhoto({...res.val(), photo: photo});
+      });
+  };
+
+  const getUserName = () => {
+    firebase
+      .database()
+      .ref(`users/${uid}`)
+      .once('value', res => {
+        if (res.val()) {
+          setName (res.val());
+        }
       });
   };
 
   useEffect(() => {
-    getUserProfile();
+    getUserName();
+    getUserPhoto();
   }, []);
 
   return (
     <View style={styles.page}>
+      <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.profileWrapper}>
         <View>
           <Text style={styles.title}># H O M E</Text>
+          <Text style={styles.subTitle}>Hello, {profileName.fullName}</Text>
           <Text style={styles.subTitle}>Selamat Datang di Aplikasi PrintJodg.com !</Text>
         </View>
-        <Image source={{uri: profile.photo}} style={styles.image} />
+        <Image source={{uri: profilePhoto.photo}} style={styles.image} />
       </View>
       <Gap height={24} />
       <View style={styles.balanceWrapper}>
@@ -62,7 +78,7 @@ const Home = ({navigation, route}) => {
           }
         />
         <Gap height={16} />
-        <Button
+        <Button style={styles.logout}
           title="List Pesanan Anda"
           textColor="white"
           onPress={() =>
@@ -72,7 +88,7 @@ const Home = ({navigation, route}) => {
             })
           }
         />
-        <Gap height={100} />
+        <Gap height={16} />
         <Button
           title="Tentang Kami (PrintJoDg.com)"
           textColor="white"
@@ -83,8 +99,19 @@ const Home = ({navigation, route}) => {
             })
           }
         />
+         <Gap height={16} />
+        <Button
+          title="Log Out"
+          textColor="white"
+          color="red"
+          
+          onPress={() =>
+            navigation.replace('SignIn', {})
+          }
+        />
       </View>
       <Gap height={24} />
+      </ScrollView>
     </View>
   );
 };
@@ -160,5 +187,11 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 32,
     fontFamily: 'Poppins-Medium',
+  },
+  buttonContainer: {
+    height: 60,
+    backgroundColor: "black",
+    alignItems: 'center',
+    borderRadius: 12,
   },
 });

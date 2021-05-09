@@ -48,17 +48,6 @@ const getUserProfile = () => {
           <Text style={styles.cardTitle}>Berikut adalah List Pesanan Anda:</Text>
           <TransactionCard />
         </View>
-
-        <Button
-          title="HOME"
-          textColor="white"
-          onPress={() =>
-            navigation.navigate('ListPesanan', {
-              title: 'List Pesanan Anda',
-              uid: uid,
-            })
-          }
-        />
       </ScrollView>
     </View>
   );
