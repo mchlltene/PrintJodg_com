@@ -41,9 +41,9 @@ const Promo = ({navigation, route}) => {
       <Gap height={24} />
       <View style={styles.promoWrapper}>
         <Text style={styles.cardTitle}>Promo-promo yang tersedia:</Text>
-        <Text style={styles.cardTitle}>1.) Virjin Mengantar dengan senyuman jika pembelian diatas Rp. 20.000</Text>
-        <Text style={styles.cardTitle}>2.) Virjin Mengantar secara free jika anda telah membeli sebanyak 10x</Text>
-        <Text style={styles.cardTitle}>3.) Vi</Text>
+        <Text style={styles.cardTitle}>1.) Voucher : Promosi berupa pemotongan harga yang dilakukan secara berkala</Text>
+        <Text style={styles.cardTitle}>2.) Gratis ongkos kirim : promosi berupa penggratisan ongkos kirim utk minimal biaya pencetakan tertentu.</Text>
+        <Text style={styles.cardTitle}>3.) Potongan Khusus Untuk mahasiswa hanya dengan menunjukan ID card</Text>
       </View>
       </ScrollView>
     </View>
